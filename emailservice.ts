@@ -10,7 +10,7 @@ async function sendVerificationEmailTwo(email: string , verificationToken: strin
     }
     // const verificationURL = new URL(`https://smsportalgivenbysir.vercel.app/verify-email`);
     // const verificationURL = new URL(`https://luxury-stay-lyart.vercel.app/verify-email-two`);
-    const verificationURL = new URL(`http://localhost:4000/verify-email-two`);
+    const verificationURL = new URL(`https://hotelmanagementsystem-users.vercel.app/verify-email-two`);
 
     verificationURL.searchParams.append('token', verificationToken);
 
@@ -40,7 +40,7 @@ async function sendVerificationEmail(email: string , verificationToken: string) 
         return;
     }
     // const verificationURL = new URL(`https://smsportalgivenbysir.vercel.app/verify-email`);
-    const verificationURL = new URL(`http://localhost:4000/verify-email`);
+    const verificationURL = new URL(`https://hotelmanagementsystem-users.vercel.app/verify-email`);
 
     verificationURL.searchParams.append('token', verificationToken);
 
