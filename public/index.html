@@ -46,23 +46,12 @@
   </nav>
 
   <!-- Hero Section with Background Video -->
-  <header class="bgvideo h-screen flex items-center justify-center">
-    <!-- Background video (with audio) -->
-    <video autoplay loop playsinline class="absolute inset-0 w-auto h-full min-w-full min-h-full  z-[-1]">
-      <source src="/imagesandvideos/luxurystay-intro.mp4" type="video/mp4" />
-    </video>
-    <!-- Overlay Content -->
-    <div class="relative bg-gray-500 bg-opacity-50">
-      <div class="text-center p-6 fade-in-up">
-        <h1 class="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg mb-4">
-          Welcome to LuxuryStay
-        </h1>
-        <p class="text-lg md:text-2xl text-white drop-shadow mb-6">
-          Experience comfort and elegance at the finest hotels.
-        </p>
-      </div>
-    </div>
-  </header>
+
+  <script type="module">
+    import('./components/header.js').then(({ default: header }) => {
+      document.body.prepend(header());
+    });
+  </script>
 
   <!-- Gallery Section -->
   <section id="gallery" class="mx-auto space-y-8 text-black my-20">
@@ -78,7 +67,7 @@
 
     <div>
       <h3 class="text-2xl font-semibold mb-2 text-blue-600 transition-transform duration-300">Meet the Visionary: Muhammad Ilyas</h3>
-      <p class="text-lg leading-relaxed transition-transform duration-300">
+       <p class="text-lg leading-relaxed transition-transform duration-300">
         Born into a close-knit Memon family, Muhammad Ilyas grew up hearing tales of entrepreneurship, perseverance, and faith. From a young age he dreamed of creating spaces that transcended lodging—places that became landmarks of cultural pride and social harmony. After years learning every facet of hospitality—from guesthouse housekeeping to boutique front-desk management—he returned to Lyari, determined to transform his childhood neighborhood.
       </p>
     </div>
